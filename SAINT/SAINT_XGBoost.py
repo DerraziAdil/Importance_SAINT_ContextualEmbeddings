@@ -30,7 +30,7 @@ from xgboost import XGBClassifier
 torch.autograd.set_detect_anomaly(True)
 
 # Define the output directory
-output_dir = r'C:\Thesis_CUDA\tf_env\Experiments\Experiment_FINAL\SAINT\outputs_SAINT_XGBoost'
+output_dir = r''
 os.makedirs(output_dir, exist_ok=True)
 print(f"Output directory set to: {output_dir}\n")
 
@@ -66,7 +66,7 @@ def load_dataset(filepath):
         raise
 
 # Replace 'train.csv' and 'test.csv' with the full paths to your files
-dataset_directory = r"C:\Thesis_CUDA\tf_env\Experiments\Experiment_FINAL\Attrition (75K)"
+dataset_directory = r""
 df_train = load_dataset(os.path.join(dataset_directory, 'train.csv'))
 df_test = load_dataset(os.path.join(dataset_directory, 'test.csv'))
 
