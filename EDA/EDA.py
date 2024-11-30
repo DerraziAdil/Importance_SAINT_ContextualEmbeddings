@@ -42,8 +42,8 @@ def load_dataset(filepath):
         raise
 
 # Replace with actual file paths
-df_train = load_dataset('Attrition (75K)/train.csv')
-df_test = load_dataset('Attrition (75K)/test.csv')
+df_train = load_dataset('train.csv')
+df_test = load_dataset('test.csv')
 
 # =======================
 # Step 4: Perform EDA Function
