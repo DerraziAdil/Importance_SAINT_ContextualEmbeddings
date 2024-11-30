@@ -53,7 +53,7 @@ def load_dataset(filepath):
         raise
 
 # Replace 'train.csv' and 'test.csv' with the full paths to your files
-dataset_directory = r"C:\Thesis_CUDA\tf_env\Experiments\Experiment_FINAL\Attrition (75K)"
+dataset_directory = r""
 df_train = load_dataset(os.path.join(dataset_directory, 'train.csv'))
 df_test = load_dataset(os.path.join(dataset_directory, 'test.csv'))
 
@@ -842,7 +842,7 @@ if best_model is not None:
         print(classification_report(test_targets, (test_preds > 0.5).astype(int)))
         
         # Save predicted probabilities and true labels to a CSV file
-        save_path = r"C:\Thesis_CUDA\tf_env\Experiments\Experiment_FINAL\SAINT\outputs_SAINT"
+        save_path = r"" # set path to where objects should be saved
         os.makedirs(save_path, exist_ok=True)  # Ensure the directory exists
         test_predictions = pd.DataFrame({
             'y_test': test_targets,
