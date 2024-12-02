@@ -1,43 +1,40 @@
-# Predicting Employee Attrition Using Hybrid Deep Learning and Tree-Based Models: A Performance and Interpretability Analysis
+# Importance of Contextual Embeddings in Tabular Data: Combining SAINT Contextual Embeddings and Tree-Based Models for Employee Attrition Prediction
 
 ## Project Overview
-This repository contains the code and data for the thesis project titled **"Predicting Employee Attrition Using Hybrid Deep Learning and Tree-Based Models: A Performance and Interpretability Analysis"**. The study investigates the effectiveness of various machine learning pipelines, including standalone models (XGBoost, LightGBM, and SAINT) and hybrid pipelines integrating SAINT-generated embeddings with tree-based models, in predicting employee attrition. The analysis emphasizes predictive performance, interpretability, and computational efficiency, providing insights into the suitability of different approaches for HR analytics tasks.
+This repository contains the code and data for the thesis project titled **"Importance of Contextual Embeddings in Tabular Data: Combining SAINT Contextual Embeddings and Tree-Based Models for Employee Attrition Prediction"**. The study investigates the impact of using SAINT (Self-Attention and Intersample Attention Transformer)-generated contextual embeddings in combination with tree-based models like XGBoost and LightGBM for predicting employee attrition. By comparing standalone and hybrid models, the analysis focuses on predictive performance, generalizability, and interpretability.
 
 ## Language
 Python
 
 ## Algorithms and Models
 - **Tree-Based Models**: XGBoost, LightGBM
-- **Deep Learning Models**: Self-Attention and Intersample Attention Transformer (SAINT)
+- **Deep Learning Models**: SAINT (Self-Attention and Intersample Attention Transformer)
 - **Hybrid Pipelines**:
   - SAINT-XGBoost
   - SAINT-LightGBM
 
 ## Libraries and Tools
 - **Data Analysis**: pandas, numpy
-- **Machine Learning**: scikit-learn, LightGBM, XGBoost, PyTorch
-- **Deep Learning**: PyTorch Lightning
+- **Machine Learning**: scikit-learn, XGBoost, LightGBM
+- **Deep Learning**: PyTorch
 - **Model Interpretability**: SHAP (SHapley Additive exPlanations)
 - **Data Visualization**: matplotlib, seaborn
-- **Hyperparameter Optimization**: Optuna
 
 ## Dataset
-- **Original Dataset**: HR dataset containing employee features such as job role, satisfaction, and tenure.
-- **Processed Dataset**: Custom preprocessing applied, available within this repository.
+- **Source**: Employee Attrition Dataset, publicly available on Kaggle.
+  - Dataset link: [Employee Attrition Dataset on Kaggle](https://www.kaggle.com/datasets/stealthtechnologies/employee-attrition-dataset)
+- The dataset includes features such as age, gender, job role, marital status, and attrition status.
 
 ## Key Features
-- **Nested Cross-Validation**: Ensures robust evaluation and prevents data leakage.
-- **Model Comparison**: Evaluates predictive performance, interpretability, and computational efficiency.
-- **SHAP Analysis**: Examines feature importance and provides interpretability insights for all models.
+- **Nested Cross-Validation**: A 5-fold stratified nested cross-validation approach was employed, with 3 inner folds for hyperparameter tuning.
+- **Model Comparison**: Comprehensive evaluation of standalone and hybrid models using metrics such as ROC-AUC, precision, recall, and F1-score.
+- **SHAP Analysis**: Feature importance analysis for interpretability using SHAP values.
+- **Error Analysis**: Examination of confusion matrices to understand error patterns.
 
 ## Repository Structure
-- **`data/`**: Contains processed datasets.
-- **`notebooks/`**: Jupyter notebooks for exploratory data analysis and pipeline experiments.
-- **`src/`**: Python scripts for model training, evaluation, and interpretability analysis.
-- **`results/`**: Output files, including SHAP plots and model performance metrics.
+- **`Data/`**: Contains the datasets used in the experiments.
+- **`Models/`**: Contains the pipelines used in the experiments.
+- **`EDA/`**: Contains the code that was used to perform EDA.
+- **`DeLong/`**: Contains the code for the DeLong statistical test. 
 - **`README.md`**: Project documentation.
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your_username/employee-attrition-prediction.git
