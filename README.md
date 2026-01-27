@@ -38,3 +38,12 @@ Python
 - **`DeLong/`**: Contains the code for the DeLong statistical test. 
 - **`README.md`**: Project documentation.
 
+## Related Publication
+
+This thesis project was also published as a peer-reviewed research article:
+
+- **Importance of Contextual Embeddings in Tabular Data**  
+  *Combining SAINT Contextual Embeddings and Tree-Based Models for Employee Attrition Prediction*  
+  Springer, Lecture Notes in Computer Science (LNCS).  
+  Available at: https://link.springer.com/chapter/10.1007/978-3-031-99958-1_27
+
